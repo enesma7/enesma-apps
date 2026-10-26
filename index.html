@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent Apps</title>
+<meta name="theme-color" content="#000007">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<style>
+:root{--g:linear-gradient(135deg,#EAD59E 0%,#D5BE87 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#000007}
+body{min-height:100vh;min-height:100dvh;background:#000007;color:#FBFBFB;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(56px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom))}
+main{width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;flex:1}
+.emblem{width:76px;height:auto;margin-bottom:24px}
+h1{font-size:28px;font-weight:700;letter-spacing:.02em;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:10px;font-size:16px;line-height:1.4;color:#FBFBFB;opacity:.72}
+.rule{width:120px;height:1px;background:var(--g);margin:26px auto 30px}
+.cards{width:100%;display:flex;flex-direction:column;gap:16px}
+a.card{position:relative;display:flex;align-items:center;gap:16px;padding:18px 18px;border-radius:20px;text-decoration:none;color:#FBFBFB;text-align:left;
+ border:1px solid transparent;background:linear-gradient(#0c0c14,#0c0c14) padding-box,linear-gradient(135deg,#EAD59E 0%,#D5BE87 45%,rgba(213,190,135,.25) 100%) border-box;
+ box-shadow:0 10px 30px rgba(0,0,0,.45);-webkit-tap-highlight-color:transparent;transition:transform .15s ease,box-shadow .15s ease}
+a.card:active{transform:scale(.98)}
+a.card:focus-visible{outline:2px solid #EAD59E;outline-offset:3px}
+.card img{flex:none;width:72px;height:72px;border-radius:22%;display:block;box-shadow:0 4px 14px rgba(0,0,0,.55)}
+.txt{flex:1;min-width:0}
+.name{display:block;font-size:20px;font-weight:700;letter-spacing:.01em}
+.desc{display:block;margin-top:4px;font-size:14px;line-height:1.35;color:#FBFBFB;opacity:.65}
+.chev{flex:none;width:12px;height:22px}
+footer{margin-top:auto;padding-top:40px;font-size:12px;letter-spacing:.08em;color:#FBFBFB;opacity:.45}
+</style>
+</head>
+<body>
+<main>
+<img class="emblem" src="emblem-gold.png" alt="ENESMA emblem">
+<h1>Agent Apps</h1>
+<p class="sub">Add to your phone&rsquo;s home screen</p>
+<div class="rule"></div>
+<div class="cards">
+<a class="card" data-href="https://app.enesmarealty.com/" href="https://app.enesmarealty.com/">
+<img src="hub-icon.png" alt="" width="72" height="72">
+<span class="txt"><span class="name">Agent Hub</span><span class="desc">Resources, tools and training</span></span>
+<svg class="chev" viewBox="0 0 12 22" aria-hidden="true"><defs><linearGradient id="c1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="12" y2="22"><stop offset="0" stop-color="#EAD59E"/><stop offset="1" stop-color="#D5BE87"/></linearGradient></defs><path d="M2 2l8 9-8 9" fill="none" stroke="url(#c1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+<a class="card" data-href="https://app.enesmarealty.com/transactions/install.html" href="https://app.enesmarealty.com/transactions/install.html">
+<img src="tc-icon.png" alt="" width="72" height="72">
+<span class="txt"><span class="name">Transaction Center</span><span class="desc">Files, checklists and deadlines</span></span>
+<svg class="chev" viewBox="0 0 12 22" aria-hidden="true"><defs><linearGradient id="c2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="12" y2="22"><stop offset="0" stop-color="#EAD59E"/><stop offset="1" stop-color="#D5BE87"/></linearGradient></defs><path d="M2 2l8 9-8 9" fill="none" stroke="url(#c2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</div>
+<footer>DRE# 01926362</footer>
+</main>
+<script>
+(function(){var p=new URLSearchParams(location.search).get('p');
+if(p==='ios'||p==='android'){var a=document.querySelectorAll('a.card');for(var i=0;i<a.length;i++){var u=new URL(a[i].getAttribute('data-href'));u.searchParams.set('p',p);a[i].href=u.toString();}}})();
+</script>
+</body>
+</html>
