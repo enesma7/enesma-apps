@@ -31,11 +31,22 @@ a.card:focus-visible{outline:2px solid #EAD59E;outline-offset:3px}
 .desc{display:block;margin-top:4px;font-size:14px;line-height:1.35;color:#FBFBFB;opacity:.65}
 .chev{flex:none;width:12px;height:22px}
 footer{margin-top:auto;padding-top:40px;font-size:12px;letter-spacing:.08em;color:#FBFBFB;opacity:.45}
+a.emblem-link{display:block;-webkit-tap-highlight-color:transparent}a.emblem-link:focus-visible{outline:2px solid #EAD59E;outline-offset:6px;border-radius:6px}
+/* Back to Agent Hub (shown only when this page is the top window) */
+.ah-back{display:none;align-items:center;min-height:44px;min-width:44px;text-decoration:none;-webkit-tap-highlight-color:transparent;flex:none;cursor:pointer}
+.ah-top .ah-back{display:inline-flex}
+.ah-pill{display:inline-flex;align-items:center;gap:5px;height:34px;padding:0 15px 0 10px;border-radius:999px;background:linear-gradient(135deg,#EAD59E 0%,#D5BE87 100%);color:#000007;font:600 13px/1 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.01em;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,7,.28),inset 0 1px 0 rgba(255,255,255,.4);transition:filter .15s,transform .1s}
+.ah-pill svg{width:14px;height:14px;flex:none}
+.ah-back:hover .ah-pill{filter:brightness(1.06)}
+.ah-back:active .ah-pill{transform:scale(.97)}
+.ah-back:focus{outline:none}.ah-back:focus-visible .ah-pill{outline:2px solid #D5BE87;outline-offset:3px}
+body{position:relative}.ah-top body{padding-top:calc(74px + env(safe-area-inset-top))}body>.ah-back{position:absolute;top:calc(6px + env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left))}
 </style>
 </head>
 <body>
+<a class="ah-back" href="https://agent.enesmarealty.com" target="_top" aria-label="Back to Agent Hub"><span class="ah-pill"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Agent Hub</span></a><script>(function(){try{if(window.top===window.self)document.documentElement.classList.add('ah-top')}catch(e){}})();</script>
 <main>
-<img class="emblem" src="enesma-realty-logo.png" alt="ENESMA Realty">
+<a class="emblem-link" href="https://agent.enesmarealty.com" target="_top" aria-label="Back to Agent Hub"><img class="emblem" src="enesma-realty-logo.png" alt="ENESMA Realty"></a>
 <h1>Agent Apps</h1>
 <p class="sub">Add to your phone&rsquo;s home screen</p>
 <div class="rule"></div>
